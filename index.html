@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEC2SYSTEMS - Software Training Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SEC2SYSTEMS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#training" class="nav-link" data-section="training">Training</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li><a href="#login" class="nav-link" data-section="login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Page -->
+    <section id="login" class="page login-page hidden">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <h1>Welcome to SEC2SYSTEMS</h1>
+                    <p>Unlock Your Potential in Tech</p>
+                </div>
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="#" class="register-link" id="registerLink">Register / Enroll Now</a></p>
+                </div>
+                <div class="divider">OR</div>
+                <button class="btn btn-secondary">
+                    <i class="fab fa-google"></i> Sign with Google
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home / Dashboard Page -->
+    <section id="home" class="page home-page">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to SEC2SYSTEMS</h1>
+                <p>Transform Your Career with Industry-Leading Tech Training</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <h3>5000+</h3>
+                        <p>Students Trained</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>95%</h3>
+                        <p>Placement Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>Industry Partners</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>10+</h3>
+                        <p>Courses Available</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg" id="exploreBtn">Explore Courses</button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+            </div>
+        </div>
+
+        <!-- Featured Courses Section -->
+        <section class="featured-courses">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <p>Start your journey with our most popular programs</p>
+            </div>
+            <div class="courses-grid featured">
+                <!-- Generative AI -->
+                <div class="course-card featured-card">
+                    <div class="course-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <p>Master the latest AI technologies and build intelligent applications</p>
+                    <button class="btn btn-sm" onclick="openEnrollModal('Generative AI')">Learn More</button>
+                </div>
+
+                <!-- Snowflake with Cortex -->
+                <div class="course-card featured-card">
+                    <div class="course-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Snowflake with Cortex</h3>
+                    <p>Cloud data warehousing with advanced analytics and AI capabilities</p>
+                    <button class="btn btn-sm" onclick="openEnrollModal('Snowflake with Cortex')">Learn More</button>
+                </div>
+
+                <!-- Python -->
+                <div class="course-card featured-card">
+                    <div class="course-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>From basics to advanced: comprehensive Python training</p>
+                    <button class="btn btn-sm" onclick="openEnrollModal('Python Programming')">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="section-header">
+                <h2>Student Success Stories</h2>
+                <p>Hear from our alumni about their transformative journey</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"SEC2SYSTEMS transformed my career. The hands-on training and industry mentorship helped me land my dream job in 3 months!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RJ</div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>AI Engineer at TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The best investment I made in myself. The trainers are industry experts and the curriculum is always updated with latest trends."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div class="author-info">
+                            <h4>Priya Singh</h4>
+                            <p>Data Scientist at CloudTech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"No upfront payment and guaranteed job placement made all the difference. Now I'm earning more than I ever expected!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h4>Amit Kapoor</h4>
+                            <p>DevOps Engineer at CloudStack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Training Page -->
+    <section id="training" class="page training-page hidden">
+        <div class="section-header">
+            <h2>All Courses</h2>
+            <p>Choose your learning path from our comprehensive course catalog</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="data">Data & Analytics</button>
+            <button class="filter-btn" data-filter="ai">AI & ML</button>
+            <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+        </div>
+
+        <div class="courses-grid">
+            <!-- Generative AI -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Generative AI</h3>
+                <p>Master the latest generative AI models, prompt engineering, and build intelligent applications from scratch.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 8 weeks</span>
+                    <span><i class="fas fa-users"></i> Beginner+</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Generative AI')">Enroll Now</button>
+            </div>
+
+            <!-- Snowflake with Cortex -->
+            <div class="course-card" data-category="data">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <h3>Snowflake with Cortex</h3>
+                <p>Cloud data warehousing with advanced analytics, AI capabilities, and real-time data processing.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 6 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Snowflake with Cortex')">Enroll Now</button>
+            </div>
+
+            <!-- Python -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Python Programming</h3>
+                <p>Complete Python mastery: from fundamentals to advanced concepts with real-world projects.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 10 weeks</span>
+                    <span><i class="fas fa-users"></i> Beginner</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Python Programming')">Enroll Now</button>
+            </div>
+
+            <!-- PySpark -->
+            <div class="course-card" data-category="data">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3>PySpark</h3>
+                <p>Distributed data processing with Apache Spark using Python for big data applications.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 7 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('PySpark')">Enroll Now</button>
+            </div>
+
+            <!-- Databricks -->
+            <div class="course-card" data-category="data">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Databricks</h3>
+                <p>Unified analytics platform combining data warehousing, data science, and machine learning.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 8 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Databricks')">Enroll Now</button>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Machine Learning</h3>
+                <p>Comprehensive ML training covering algorithms, model building, and deployment strategies.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 10 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Machine Learning')">Enroll Now</button>
+            </div>
+
+            <!-- Deep Learning -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Deep Learning</h3>
+                <p>Advanced neural networks, CNNs, RNNs, and transformers for cutting-edge AI applications.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 10 weeks</span>
+                    <span><i class="fas fa-users"></i> Advanced</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Deep Learning')">Enroll Now</button>
+            </div>
+
+            <!-- AWS DevOps -->
+            <div class="course-card" data-category="cloud">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <h3>AWS DevOps</h3>
+                <p>Master cloud deployment, CI/CD pipelines, and infrastructure automation on AWS.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 8 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('AWS DevOps')">Enroll Now</button>
+            </div>
+
+            <!-- Agentic AI -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Agentic AI</h3>
+                <p>Build autonomous AI agents that can perform complex tasks and make intelligent decisions.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 8 weeks</span>
+                    <span><i class="fas fa-users"></i> Advanced</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Agentic AI')">Enroll Now</button>
+            </div>
+
+            <!-- Chatbots -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Chatbots</h3>
+                <p>Create intelligent conversational AI systems using NLP and machine learning technologies.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 6 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Chatbots')">Enroll Now</button>
+            </div>
+
+            <!-- Chat Assistants -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Chat Assistants</h3>
+                <p>Build sophisticated chat assistants with context awareness and multi-turn conversations.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 6 weeks</span>
+                    <span><i class="fas fa-users"></i> Beginner+</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Chat Assistants')">Enroll Now</button>
+            </div>
+
+            <!-- Prompt Engineering -->
+            <div class="course-card" data-category="ai">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <h3>Prompt Engineering</h3>
+                <p>Master the art and science of crafting effective prompts for AI models and LLMs.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 4 weeks</span>
+                    <span><i class="fas fa-users"></i> Beginner</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Prompt Engineering')">Enroll Now</button>
+            </div>
+
+            <!-- Data Warehouse -->
+            <div class="course-card" data-category="data">
+                <div class="card-glow"></div>
+                <div class="course-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <h3>Data Warehouse</h3>
+                <p>Design and implement enterprise data warehouses with modern tools and best practices.</p>
+                <div class="course-meta">
+                    <span><i class="fas fa-clock"></i> 8 weeks</span>
+                    <span><i class="fas fa-users"></i> Intermediate</span>
+                </div>
+                <button class="btn btn-primary" onclick="openEnrollModal('Data Warehouse')">Enroll Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="page about-page hidden">
+        <div class="section-header">
+            <h2>About SEC2SYSTEMS</h2>
+            <p>Building careers, transforming futures</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-section">
+                <div class="about-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To empower individuals with cutting-edge technology skills and bridge the gap between education and industry requirements, ensuring 100% job assistance and career growth.</p>
+            </div>
+
+            <div class="about-section">
+                <div class="about-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To become the leading software training institute recognized for producing industry-ready professionals who drive innovation and excel in their careers.</p>
+            </div>
+        </div>
+
+        <div class="highlights-section">
+            <div class="section-header">
+                <h2>Why Choose SEC2SYSTEMS?</h2>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>No Advance Payment</h3>
+                    <p>Zero upfront fees. Pay only after securing employment, making quality education accessible to everyone.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>100% Job Assistance</h3>
+                    <p>Our dedicated placement team ensures every graduate gets placed in top companies with competitive packages.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industry-Focused Training</h3>
+                    <p>Curriculum designed by industry experts, covering latest technologies and real-world challenges.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-users-tie"></i>
+                    </div>
+                    <h3>Expert Mentors</h3>
+                    <p>Learn from experienced professionals working at leading tech companies with years of expertise.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Hands-On Projects</h3>
+                    <p>Work on real-world projects that showcase your skills and build a strong portfolio for employers.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Industry Certifications</h3>
+                    <p>Earn recognized certifications that boost your credentials and career prospects in the job market.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Flexible Learning</h3>
+                    <p>Choose between online and offline classes to fit your schedule and learning preferences.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Career Support</h3>
+                    <p>Resume building, interview coaching, and continuous support throughout your career journey.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="section-header">
+                <h2>Our Numbers Speak</h2>
+                <p>Achievements and milestones</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h2>5000+</h2>
+                    <p>Students Trained</p>
+                </div>
+                <div class="stat-box">
+                    <h2>95%</h2>
+                    <p>Placement Success Rate</p>
+                </div>
+                <div class="stat-box">
+                    <h2>50+</h2>
+                    <p>Industry Partners</p>
+                </div>
+                <div class="stat-box">
+                    <h2>100+</h2>
+                    <p>Corporate Partnerships</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page contact-page hidden">
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>Have questions? We'd love to hear from you</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>info@sec2systems.com</p>
+                    <a href="mailto:info@sec2systems.com" class="contact-link">Send us an email</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+91 8179066637</p>
+                    <a href="tel:+918179066637" class="contact-link">Call us now</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Office</h3>
+                    <p>Hyderabad, India</p>
+                    <a href="#" class="contact-link">Get directions</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p>Sat: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <h3>Send us a Message</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Message subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Modal -->
+    <div id="enrollModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enroll in <span id="courseNameModal"></span></h2>
+            <form class="enrollment-form" id="enrollmentForm">
+                <div class="form-group">
+                    <label for="enrollName">Full Name</label>
+                    <input type="text" id="enrollName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="enrollEmail">Email Address</label>
+                    <input type="email" id="enrollEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="enrollPhone">Phone Number</label>
+                    <input type="tel" id="enrollPhone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="enrollExperience">Experience Level</label>
+                    <select id="enrollExperience" required>
+                        <option value="">Select your experience</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Complete Enrollment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SEC2SYSTEMS</h4>
+                <p>Transforming careers through innovative tech education and industry partnerships.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#training">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SEC2SYSTEMS. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
