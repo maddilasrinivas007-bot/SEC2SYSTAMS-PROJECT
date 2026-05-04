@@ -940,6 +940,26 @@ a {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--spacing-2xl);
+    position: relative;
+    isolation: isolate;
+}
+
+.highlights-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('hands.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.highlights-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .highlights-grid {
@@ -1069,6 +1089,70 @@ a {
 
 .stat-box p {
     font-size: 0.95rem;
+}
+
+.engineer-highlights {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.engineer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.engineer-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-2xl);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: all var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.engineer-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff4d4d;
+    box-shadow: 0 0 30px rgba(255, 77, 77, 0.15);
+}
+
+.engineer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.engineer-info h3 {
+    color: var(--light-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.engineer-info p {
+    color: var(--muted-text);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.engineer-badge {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 77, 77, 0.15);
+    color: #ff7f7f;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 /* ===========================

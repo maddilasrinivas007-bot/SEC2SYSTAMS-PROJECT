@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260">
+  <defs>
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6f7f9"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="260" height="260" rx="36" ry="36" fill="#222238"/>
+  <circle cx="130" cy="110" r="86" fill="url(#whiteGrad)" stroke="#d0d0d8" stroke-width="6"/>
+  <text x="130" y="118" text-anchor="middle" font-family="Poppins, sans-serif" font-size="34" font-weight="700" fill="#111118">ASRAF</text>
+  <text x="130" y="168" text-anchor="middle" font-family="Poppins, sans-serif" font-size="18" font-weight="600" fill="#b0b0c3">Support Engineer</text>
+</svg>
